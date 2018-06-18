@@ -1,4 +1,4 @@
-# pesquisa-de-cep-com-react-redux-e-redux-thunk
+# Sistema de pesquisa de cep utilizando react, redux e o redux-thunk
 
 Exemplo de um sistema de busca de CEP com react, redux e redux-thunk.
 
