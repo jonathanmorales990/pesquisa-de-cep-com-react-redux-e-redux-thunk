@@ -7,13 +7,13 @@ class Consultar extends Component {
 
 	constructor(){
 
-		super();
+	super();
 				
-			this.onChange = this.onChange.bind(this);
-			this.pesqCep = this.pesqCep.bind(this);
-			this.state = {
-				cep:''
-			}
+		this.onChange = this.onChange.bind(this);
+		this.pesqCep = this.pesqCep.bind(this);
+		this.state = {
+			cep:''
+		}
 	}
 
 	onChange(e) {
