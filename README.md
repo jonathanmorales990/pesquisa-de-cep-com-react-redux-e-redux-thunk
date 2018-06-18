@@ -1,6 +1,6 @@
 # pesquisa-de-cep-com-react-redux-e-redux-thunk
 
-Exemplo de um sistema de busca de CEP com react, redux e redux-thunk
+Exemplo de um sistema de busca de CEP com react, redux e redux-thunk.
 
 Para iniciar o server em modo desenvovilmento utilize o comando:
 
