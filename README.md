@@ -6,7 +6,6 @@ Para iniciar o server em modo desenvovilmento utilize o comando:
 
 **npm run dev**
 
-to start the build and put all outputs in build folder:
 Para efetuar uma build e botar todo o conteudo dentro da pasta build utilize o comando:
 
 **npm run production**
