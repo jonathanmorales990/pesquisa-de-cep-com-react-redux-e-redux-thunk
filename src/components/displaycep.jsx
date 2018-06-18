@@ -1,8 +1,14 @@
 import React, { Component } from 'react';
-import { Container, Row, Col, Card, CardTitle, CardText } from 'reactstrap';
+import { Container, Row, Col, Card, CardTitle, CardText, Alert } from 'reactstrap';
 import '../css/displaycep.css'
+
+import { connect } from 'react-redux';
+
 class Displaycep extends Component {
 	
+	componentDidUpdate(prevProps, prevState) {
+	    console.log(this.props.displaycep.consulta);
+	}
 	render() {
   	
 	    return (
@@ -13,7 +19,17 @@ class Displaycep extends Component {
 
 						<Card body className="text-center" className='displaycepCard'>
 					    	<CardTitle>Consultar CEP</CardTitle>
-					    	<CardText>With supporting text below as a natural lead-in to additional content.</CardText>
+
+						    	{this.props.displaycep.erro ? 
+						    	<Alert color="danger">
+									<strong>Erro!</strong>
+								</Alert> : null
+								}
+
+							{this.props.displaycep.consulta ? 
+					    	<CardText>{`Bairro ${this.props.displaycep.consulta.bairro} ${this.props.displaycep.consulta.logradouro} ${this.props.displaycep.consulta.localidade} - ${this.props.displaycep.consulta.uf}`}</CardText> : null 
+					    	}
+
 						</Card>
 
 					</Col>
@@ -25,4 +41,6 @@ class Displaycep extends Component {
   	}
 }
 
-export default Displaycep;
+const mapStateToProps = state => ({ displaycep: state.displaycep });
+
+export default connect(mapStateToProps)(Displaycep);

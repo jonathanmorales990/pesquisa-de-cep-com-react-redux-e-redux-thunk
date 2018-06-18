@@ -1,6 +1,11 @@
 import React, { Component } from 'react';
 import { Container, Row, Col, Card, CardTitle, CardText,Button,Input } from 'reactstrap';
-import MaskedInput from 'react-maskedinput';
+
+import { connect } from 'react-redux';
+
+import { bindActionCreators } from 'redux';
+import { buscaCep } from '../actions/displaycepAction';
+
 import '../css/consultar.css';
 
 class Consultar extends Component {
@@ -21,7 +26,7 @@ class Consultar extends Component {
 	}	
 
 	pesqCep(){
-		console.log(this.state.cep);
+		this.props.buscaCep(this.state.cep);
 	}
 
 	render() {
@@ -46,4 +51,6 @@ class Consultar extends Component {
   	}
 }
 
-export default Consultar;
+const mapDispatchToProps = dispatch => bindActionCreators({ buscaCep }, dispatch);
+
+export default connect(null, mapDispatchToProps)(Consultar);

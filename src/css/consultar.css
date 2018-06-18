@@ -1,8 +1,8 @@
 .consultacep{
-	height: 100px;
+	height: 105px;
 	padding: 5px;
 	background-color: lightblue;
 }
 input{
-	margin-bottom: 5px;
+	margin-bottom: 5px!important;
 }
