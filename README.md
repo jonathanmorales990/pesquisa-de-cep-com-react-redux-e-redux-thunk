@@ -4,10 +4,11 @@ Exemplo de um sistema de busca de CEP com react, redux e redux-thunk.
 
 Instalação:
 
-**git clone https://github.com/jonathanmorales990/pesquisa-de-cep-com-react-redux-e-redux-thunk.git
+**git clone https://github.com/jonathanmorales990/pesquisa-de-cep-com-react-redux-e-redux-thunk.git**
 
-cd pesquisa-de-cep-com-react-redux-e-redux-thunk && npm install**
+**cd pesquisa-de-cep-com-react-redux-e-redux-thunk**
 
+**npm install**
 
 Para iniciar o server em modo desenvovilmento utilize o comando:
 
