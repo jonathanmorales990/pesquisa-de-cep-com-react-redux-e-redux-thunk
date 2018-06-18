@@ -9,11 +9,11 @@ class Consultar extends Component {
 
 		super();
 				
-		this.onChange = this.onChange.bind(this);
-		this.pesqCep = this.pesqCep.bind(this);
-		this.state = {
-			cep:''
-		}
+			this.onChange = this.onChange.bind(this);
+			this.pesqCep = this.pesqCep.bind(this);
+			this.state = {
+				cep:''
+			}
 	}
 
 	onChange(e) {
@@ -33,7 +33,7 @@ class Consultar extends Component {
 					<Col className='consultacep' xs={{ size: 4, offset:4}} sm={{ size: 6, offset:4}} md={{ size: 4, offset:4 }}>
 
 						
-							<Input type="text" name="cep" placeholder="Insira o seu CEP" onChange={this.onChange}/>	
+						<Input type="text" name="cep" placeholder="Insira o seu CEP" onChange={this.onChange}/>	
 					    	<Button size="lg" block onClick={this.pesqCep} >Consultar</Button>
 					    	
 
