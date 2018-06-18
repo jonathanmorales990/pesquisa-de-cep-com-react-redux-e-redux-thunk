@@ -5,7 +5,7 @@ import '../css/displaycep.css'
 import { connect } from 'react-redux';
 
 class Displaycep extends Component {
-	
+
 	componentDidUpdate(prevProps, prevState) {
 	    console.log(this.props.displaycep.consulta);
 	}
@@ -22,12 +22,16 @@ class Displaycep extends Component {
 
 						    	{this.props.displaycep.erro ? 
 						    	<Alert color="danger">
-									<strong>Erro!</strong>
+									<strong>Erro! </strong> {this.props.displaycep.erroMessage}
 								</Alert> : null
 								}
 
 							{this.props.displaycep.consulta ? 
 					    	<CardText>{`Bairro ${this.props.displaycep.consulta.bairro} ${this.props.displaycep.consulta.logradouro} ${this.props.displaycep.consulta.localidade} - ${this.props.displaycep.consulta.uf}`}</CardText> : null 
+					    	}
+
+					    	{this.props.displaycep.loading ? 
+					    	<CardText>Procurando seu CEP aguarde...</CardText> : null 
 					    	}
 
 						</Card>
