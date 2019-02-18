@@ -3,13 +3,17 @@ import axios from 'axios';
 export function displayError() {
     return { type: 'DISPLAY_ERROR' }
 }
+export function onChangeCepInput(e) {
+    return { type: 'ON_CHANGE_CEP_INPUT', payload: e.target.value };
+}
+export function buscaCep(){
+    /* é aqui que a mágica acontece */
+    return function (dispatch, getState) {
 
-export function buscaCep(data){
-   
-    let url = `http://viacep.com.br/ws/${data}/json/`;
+        let { cep } = getState().displaycep;
 
-    return function (dispatch) {
-        
+        let url = `http://viacep.com.br/ws/${cep}/json/`;
+
         dispatch({
             type:'LOADING'
         });
