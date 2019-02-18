@@ -16,7 +16,7 @@ Instalação:
 
 Para iniciar o server em modo desenvovilmento utilize o comando:
 
-**npm run dev**
+**npm run dev** e **localhost:8080** para acessar
 
 
 
