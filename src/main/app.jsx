@@ -9,21 +9,14 @@ import { Provider } from 'react-redux';
 
 import thunk from 'redux-thunk';
 
-import displaycepReducer from '../reducers/displaycepReducer';
+import displaycep from '../reducers/displaycepReducer';
 
 import '../css/app.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
 
-const reducers = combineReducers({
-    
-    displaycep: displaycepReducer
+const reducers = combineReducers({ displaycep });
 
-});
-
-const store = createStore(
-	reducers,
-	applyMiddleware(thunk)
-);
+const store = createStore( reducers, applyMiddleware(thunk) );
 
 class App extends Component {
 	
