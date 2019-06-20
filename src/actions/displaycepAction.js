@@ -20,20 +20,15 @@ export function buscaCep(){
 
         axios.get(url)
             .then((response) => {
-
                 dispatch({
-
                     type:'DISPLAY_CEP', 
                     payload: response.data
-
                 });
 
             }).catch((error) => { 
-
                 dispatch({
-
-                    type: 'DISPLAY_ERROR'
-            
+                    type: 'DISPLAY_ERROR',
+                    payload: error.response
                 });
             })
     }
