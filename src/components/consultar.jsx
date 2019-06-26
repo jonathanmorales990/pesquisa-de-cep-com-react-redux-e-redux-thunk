@@ -14,18 +14,12 @@ class Consultar extends Component {
   	
 	    return (
 			<Container>
-		    
 				<Row>
 					<Col className='consultacep' xs={{ size: 4, offset:4}} sm={{ size: 6, offset:4}} md={{ size: 4, offset:4 }}>
-
-						
 						<Input type="text" name="cep" placeholder="Insira o seu CEP" onChange={this.props.onChangeCepInput}/>	
 						<Button size="lg" block onClick={() => this.props.buscaCep()} >Consultar</Button>
-					    	
-
 					</Col>
 				</Row>
-		    
 			</Container>
 		)
 	    
