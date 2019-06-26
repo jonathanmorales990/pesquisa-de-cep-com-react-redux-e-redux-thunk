@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
+import { connect } from 'react-redux';
+
 import { Container, Row, Col, Card, CardTitle, CardText, Alert } from 'reactstrap';
 import '../css/displaycep.css'
-
-import { connect } from 'react-redux';
 
 class Displaycep extends Component {
 
