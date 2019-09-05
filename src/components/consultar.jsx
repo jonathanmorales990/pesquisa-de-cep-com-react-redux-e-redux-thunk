@@ -3,7 +3,7 @@ import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
 
 import { Container, Row, Col, Card, CardTitle, CardText,Button,Input } from 'reactstrap';
-import { buscaCep, onChangeCepInput } from '../actions/displaycepAction';
+import { buscaCep, onChangeCepInput } from '../actions/cep';
 
 import '../css/consultar.css';
 
@@ -24,7 +24,5 @@ class Consultar extends Component {
 	    
   	}
 }
-
 const mapDispatchToProps = dispatch => bindActionCreators({ buscaCep, onChangeCepInput }, dispatch);
-
 export default connect(null, mapDispatchToProps)(Consultar);

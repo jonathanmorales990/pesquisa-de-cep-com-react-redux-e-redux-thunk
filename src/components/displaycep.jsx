@@ -1,11 +1,9 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
-
 import { Container, Row, Col, Card, CardTitle, CardText, Alert } from 'reactstrap';
 import '../css/displaycep.css'
 
 class Displaycep extends Component {
-
 	render() {
 		return (
 			<Container>
@@ -13,24 +11,20 @@ class Displaycep extends Component {
 					<Col className='displaycep' xs={{ size: 4, offset:4}} sm={{ size: 6, offset:4}} md={{ size: 4, offset:4 }}>
 						<Card body className="text-center" className='displaycepCard'>
 							<CardTitle>Consultar CEP</CardTitle>
-
 							{
-								this.props.displaycep.erro ? 
+								this.props.cepReducer.erro ? 
 									<Alert color="danger">
-										<strong>Erro! </strong> {this.props.displaycep.erroMessage}
+										<strong>Erro! </strong> {this.props.cepReducer.erroMessage}
 									</Alert> : null
 							}
-
 							{
-								this.props.displaycep.consulta ? 
-									<CardText>{`Bairro ${this.props.displaycep.consulta.bairro} ${this.props.displaycep.consulta.logradouro} ${this.props.displaycep.consulta.localidade} - ${this.props.displaycep.consulta.uf}`}</CardText> : null 
+								this.props.cepReducer.consulta ? 
+									<CardText>{`Bairro ${this.props.cepReducer.consulta.bairro} ${this.props.cepReducer.consulta.logradouro} ${this.props.cepReducer.consulta.localidade} - ${this.props.cepReducer.consulta.uf}`}</CardText> : null 
 							}
-
 							{	
-								this.props.displaycep.loading ? 
+								this.props.cepReducer.loading ? 
 									<CardText>Procurando seu CEP aguarde...</CardText> : null 
 							}
-
 						</Card>
 					</Col>
 				</Row>
@@ -38,7 +32,5 @@ class Displaycep extends Component {
 		)
 	}
 }
-
-const mapStateToProps = state => ({ displaycep: state.displaycep });
-
+const mapStateToProps = state => ({ cepReducer: state.cepReducer });
 export default connect(mapStateToProps)(Displaycep);
