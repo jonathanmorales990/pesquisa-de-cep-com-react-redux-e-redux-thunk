@@ -1,16 +1,12 @@
 import React, { Component } from 'react';
 import { connect } from 'react-redux';
 import { bindActionCreators } from 'redux';
-
 import { Container, Row, Col, Card, CardTitle, CardText,Button,Input } from 'reactstrap';
 import { buscaCep, onChangeCepInput } from '../actions/cep';
-
 import '../css/consultar.css';
 
 class Consultar extends Component {
-
 	render() {
-  	
 	    return (
 			<Container>
 				<Row>
